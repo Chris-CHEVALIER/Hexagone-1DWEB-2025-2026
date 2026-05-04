@@ -27,6 +27,11 @@ header nav ol li a:hover {
   color: rgb(255, 242, 124);
 }
 
+.logo {
+  display: none;
+  font-size: 48px;
+}
+
 .content {
   margin: 0 30px;
 }
@@ -36,12 +41,12 @@ h1 {
 }
 
 .img-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .cosmo-picture {
-  width: 320px;
+  width: 25%;
   border-radius: 12px;
   box-shadow: 6px 6px 16px;
 }
@@ -53,4 +58,45 @@ a {
 a:hover {
   color: rgb(72, 112, 255);
   text-decoration: underline;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.blog-article {
+  width: 300px;
+  background-color: white;
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: 2px 2px 12px;
+}
+
+@media (max-width: 1000px) {
+  .cosmo-picture {
+    width: 90%;
+  }
+}
+
+@media (max-width: 500px) {
+  header nav ol {
+    background-color: seagreen;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  header nav ol li {
+    display: block;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .logo {
+    display: inline;
+  }
 }
