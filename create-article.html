@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr-FR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🐾 Cosmo, the cosmic doggo - Rédiger un article</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container">
+    <h1>Rédiger un article</h1>
+    <form method="POST">
+      <label for="title">Titre</label>
+      <input
+        type="text"
+        name="title"
+        id="title"
+        required
+        class="form-control"
+        placeholder="Le titre de l'article"
+      />
+
+      <label for="content">Contenu</label>
+      <textarea
+        name="content"
+        id="content"
+        placeholder="Le contenu de l'article"
+        required
+        class="form-control"
+        minlength="10"
+        maxlength="200"
+      ></textarea>
+
+      <label for="published-at">Date de publication</label>
+      <input
+        class="form-control"
+        type="date"
+        name="published-at"
+        id="published-at"
+      />
+
+      <label for="color">Couleur</label>
+      <input class="form-control" type="color" name="color" id="color" />
+
+      <label for="phone">Numéro de téléphone</label>
+      <input
+        class="form-control"
+        type="tel"
+        name="phone"
+        id="phone"
+        pattern="[0-9]{10}"
+      />
+
+      <input
+        type="submit"
+        class="btn btn-success mt-2"
+        value="Publier l'article"
+      />
+    </form>
+  </body>
+</html>
