@@ -10,56 +10,84 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="container">
-    <h1>Rédiger un article</h1>
-    <form method="POST">
-      <label for="title">Titre</label>
-      <input
-        type="text"
-        name="title"
-        id="title"
-        required
-        class="form-control"
-        placeholder="Le titre de l'article"
-      />
+  <body>
+    <header>
+      <nav>
+        <ol>
+          <div>
+            <a href="index.html"><i class="fa-solid fa-paw"></i></a>
+            <li><a href="index.html">Présentation</a></li>
+            <li><a href="#pictures">Photos</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="./create-article.html">Rédiger un article</a></li>
+          </div>
+          <p class="logo">🐾</p>
+        </ol>
+      </nav>
+    </header>
+    <main class="container">
+      <h2>Rédiger un article <i class="fa-solid fa-eye"></i></h2>
+      <form method="POST">
+        <label for="title">Titre</label>
+        <input
+          type="text"
+          name="title"
+          id="title"
+          required
+          class="form-control"
+          placeholder="Le titre de l'article"
+        />
 
-      <label for="content">Contenu</label>
-      <textarea
-        name="content"
-        id="content"
-        placeholder="Le contenu de l'article"
-        required
-        class="form-control"
-        minlength="10"
-        maxlength="200"
-      ></textarea>
+        <label for="content">Contenu</label>
+        <textarea
+          name="content"
+          id="content"
+          placeholder="Le contenu de l'article"
+          required
+          class="form-control"
+          minlength="10"
+          maxlength="200"
+        ></textarea>
 
-      <label for="published-at">Date de publication</label>
-      <input
-        class="form-control"
-        type="date"
-        name="published-at"
-        id="published-at"
-      />
+        <label for="published-at">Date de publication</label>
+        <input
+          class="form-control"
+          type="date"
+          name="published-at"
+          id="published-at"
+        />
 
-      <label for="color">Couleur</label>
-      <input class="form-control" type="color" name="color" id="color" />
+        <label for="color">Couleur de l'article</label>
+        <input class="form-control" type="color" name="color" id="color" />
 
-      <label for="phone">Numéro de téléphone</label>
-      <input
-        class="form-control"
-        type="tel"
-        name="phone"
-        id="phone"
-        pattern="[0-9]{10}"
-      />
+        <!--
+        <label for="phone">Numéro de téléphone</label>
+        <input
+          class="form-control"
+          type="tel"
+          name="phone"
+          id="phone"
+          pattern="[0-9]{10}"
+          placeholder="0612345678"
+        />
+        -->
 
-      <input
-        type="submit"
-        class="btn btn-success mt-2"
-        value="Publier l'article"
-      />
-    </form>
+        <input
+          type="submit"
+          class="btn btn-success mt-2"
+          value="Publier l'article"
+        />
+      </form>
+    </main>
   </body>
 </html>
