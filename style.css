@@ -7,10 +7,13 @@ body {
   background-color: beige;
 }
 
+header nav {
+  background-color: dodgerblue;
+}
+
 header nav ol {
   text-align: center;
   margin: 0;
-  background-color: dodgerblue;
   padding: 24px;
 }
 
@@ -94,12 +97,12 @@ a:hover {
 }
 
 @media (max-width: 500px) {
-  header nav ol {
-    background-color: seagreen;
+  header nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    background-color: seagreen;
   }
 
   header nav ol li {
