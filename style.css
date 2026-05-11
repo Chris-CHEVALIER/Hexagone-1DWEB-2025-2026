@@ -1,5 +1,10 @@
+@font-face {
+  font-family: FerrariSans;
+  src: url('./assets/FerrariSans.woff2');
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: FerrariSans;
   margin: 0;
   /* background-image: url('./images/cosmo.jpg');
   background-size: cover;
@@ -88,6 +93,62 @@ a:hover {
   background-color: blue;
   width: 50vw;
   height: 50px;
+}
+
+.button {
+  background-color: #ff6600;
+  color: white;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease,
+    color 0.3s ease;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: scale(1.5);
+  background-color: #ff3300;
+  color: black;
+}
+
+/* @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1 {
+  opacity: 0;
+  animation: fadeIn 5s ease-in forwards;
+} */
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+h2 {
+  animation: slideIn 1s ease-out forwards;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.bounce {
+  animation: bounce 0.5s ease-in-out infinite;
 }
 
 @media (max-width: 1000px) {
